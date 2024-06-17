@@ -4,3 +4,43 @@
 2024-06-17 08:51:55,162 Received request: {'num1': 5.0, 'num2': 5.0, 'operation': 'multiply'}
 2024-06-17 08:51:55,162 Sent result: 25.0
 2024-06-17 08:51:55,163 ---- Server Stop ----
+2024-06-17 09:20:44,670 ---- Server Start ----
+2024-06-17 09:20:44,679 Server listening on port 65432
+2024-06-17 09:21:00,928 Connected by ('127.0.0.1', 63628)
+2024-06-17 09:21:00,928 Received request: {'num1': 2.0, 'num2': 2.0, 'operation': 'add'}
+2024-06-17 09:21:00,929 Sent result: 4.0
+2024-06-17 09:21:00,929 ---- Server Stop ----
+2024-06-17 09:25:50,788 ---- Server Start ----
+2024-06-17 09:25:50,793 Server listening on port 65432
+2024-06-17 09:26:07,947 Connected by ('127.0.0.1', 64043)
+2024-06-17 09:26:07,947 Received request: {'num1': 0.0, 'num2': 1.0, 'operation': 'divide'}
+2024-06-17 09:26:07,947 Sent result: 0.0
+2024-06-17 09:26:07,947 ---- Server Stop ----
+2024-06-17 09:30:41,822 ---- Server Start ----
+2024-06-17 09:30:41,830 Server listening on port 65432
+2024-06-17 09:30:57,634 Connected by ('127.0.0.1', 64143)
+2024-06-17 09:30:57,634 Received request: {'num1': 9.0, 'num2': 0.0, 'operation': 'divide'}
+2024-06-17 09:31:18,183 ---- Server Start ----
+2024-06-17 09:31:18,188 Server listening on port 65432
+2024-06-17 09:31:32,826 Connected by ('127.0.0.1', 64150)
+2024-06-17 09:31:32,826 Received request: {'num1': 0.0, 'num2': 4.0, 'operation': 'divide'}
+2024-06-17 09:31:32,827 Sent result: 0.0
+2024-06-17 09:31:32,827 ---- Server Stop ----
+2024-06-17 09:31:48,344 ---- Server Start ----
+2024-06-17 09:31:48,353 Server listening on port 65432
+2024-06-17 09:32:03,076 Connected by ('127.0.0.1', 64159)
+2024-06-17 09:32:03,076 Received request: {'num1': 4.0, 'num2': 0.0, 'operation': 'divide'}
+2024-06-17 09:34:54,626 ---- Server Start ----
+2024-06-17 09:34:54,634 Server listening on port 65432
+2024-06-17 09:35:05,782 Connected by ('127.0.0.1', 64199)
+2024-06-17 09:35:05,782 Received request: {'num1': 4.0, 'num2': 0.0, 'operation': 'divide'}
+2024-06-17 09:36:01,643 ---- Server Start ----
+2024-06-17 09:36:01,646 Server listening on port 65432
+2024-06-17 09:36:40,128 Connected by ('127.0.0.1', 64220)
+2024-06-17 09:36:40,129 Received request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 09:36:40,129 Sent result: 8.0
+2024-06-17 09:36:40,129 ---- Server Stop ----
+2024-06-17 09:36:45,279 ---- Server Start ----
+2024-06-17 09:36:45,284 Server listening on port 65432
+2024-06-17 09:36:58,276 Connected by ('127.0.0.1', 64221)
+2024-06-17 09:36:58,277 Received request: {'num1': 4.0, 'num2': 0.0, 'operation': 'divide'}

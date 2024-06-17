@@ -20,14 +20,21 @@ class Client:
 
     def send_request(self, user_input):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            s.connect((self.host, self.port))
-            s.sendall(pickle.dumps(user_input))
-            self.logger.info(f'Sent request: {user_input}')
+            try:
+                s.connect((self.host, self.port))
+                s.sendall(pickle.dumps(user_input))
+                self.logger.info(f'Sent request: {user_input}')
 
-            data = s.recv(1024)
-            result = pickle.loads(data)
-            self.logger.info(f'Received result: {result}')
-            print(f"The result is: {result}")
+                data = s.recv(1024)
+                result = pickle.loads(data)
+                self.logger.info(f'Received result: {result}')
+                print(f"The result is: {result}")
+
+            except EOFError:
+                print("Error: Operation not allowd - Server did not send a valid response.")
+            except Exception as e:
+                print(f"Error: {e}")
+
 
     def run(self):
         self.logger.info('---- Client Start ----')

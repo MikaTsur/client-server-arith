@@ -26,6 +26,8 @@ class MultiplyOperation(AbstractOperation):
 
 class DivideOperation(AbstractOperation):
     def operate(self, num1, num2):
+        if num2 == 0:
+            raise ValueError("Division by zero is not allowed")
         return num1 / num2
 
 def get_operation(operation):

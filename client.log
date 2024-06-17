@@ -4,3 +4,48 @@
 2024-06-17 08:51:55,162 Sent request: {'num1': 5.0, 'num2': 5.0, 'operation': 'multiply'}
 2024-06-17 08:51:55,163 Received result: 25.0
 2024-06-17 08:51:55,163 ---- Client Stop ----
+2024-06-17 09:20:53,875 ---- Client Start ----
+2024-06-17 09:20:53,875 ---- Function get_user_input Enter ----
+2024-06-17 09:21:00,920 ---- Function get_user_input Exit ----
+2024-06-17 09:21:00,928 Sent request: {'num1': 2.0, 'num2': 2.0, 'operation': 'add'}
+2024-06-17 09:21:00,929 Received result: 4.0
+2024-06-17 09:21:00,929 ---- Client Stop ----
+2024-06-17 09:25:29,703 ---- Client Start ----
+2024-06-17 09:25:29,704 ---- Function get_user_input Enter ----
+2024-06-17 09:25:39,334 ---- Function get_user_input Exit ----
+2024-06-17 09:25:56,919 ---- Client Start ----
+2024-06-17 09:25:56,919 ---- Function get_user_input Enter ----
+2024-06-17 09:26:07,940 ---- Function get_user_input Exit ----
+2024-06-17 09:26:07,947 Sent request: {'num1': 0.0, 'num2': 1.0, 'operation': 'divide'}
+2024-06-17 09:26:07,947 Received result: 0.0
+2024-06-17 09:26:07,948 ---- Client Stop ----
+2024-06-17 09:30:47,071 ---- Client Start ----
+2024-06-17 09:30:47,072 ---- Function get_user_input Enter ----
+2024-06-17 09:30:57,628 ---- Function get_user_input Exit ----
+2024-06-17 09:30:57,634 Sent request: {'num1': 9.0, 'num2': 0.0, 'operation': 'divide'}
+2024-06-17 09:31:22,983 ---- Client Start ----
+2024-06-17 09:31:22,983 ---- Function get_user_input Enter ----
+2024-06-17 09:31:32,810 ---- Function get_user_input Exit ----
+2024-06-17 09:31:32,826 Sent request: {'num1': 0.0, 'num2': 4.0, 'operation': 'divide'}
+2024-06-17 09:31:32,827 Received result: 0.0
+2024-06-17 09:31:32,827 ---- Client Stop ----
+2024-06-17 09:31:51,468 ---- Client Start ----
+2024-06-17 09:31:51,468 ---- Function get_user_input Enter ----
+2024-06-17 09:32:03,070 ---- Function get_user_input Exit ----
+2024-06-17 09:32:03,075 Sent request: {'num1': 4.0, 'num2': 0.0, 'operation': 'divide'}
+2024-06-17 09:34:57,506 ---- Client Start ----
+2024-06-17 09:34:57,507 ---- Function get_user_input Enter ----
+2024-06-17 09:35:05,765 ---- Function get_user_input Exit ----
+2024-06-17 09:35:05,782 Sent request: {'num1': 4.0, 'num2': 0.0, 'operation': 'divide'}
+2024-06-17 09:35:05,783 ---- Client Stop ----
+2024-06-17 09:36:32,737 ---- Client Start ----
+2024-06-17 09:36:32,737 ---- Function get_user_input Enter ----
+2024-06-17 09:36:40,121 ---- Function get_user_input Exit ----
+2024-06-17 09:36:40,129 Sent request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 09:36:40,129 Received result: 8.0
+2024-06-17 09:36:40,131 ---- Client Stop ----
+2024-06-17 09:36:49,787 ---- Client Start ----
+2024-06-17 09:36:49,787 ---- Function get_user_input Enter ----
+2024-06-17 09:36:58,269 ---- Function get_user_input Exit ----
+2024-06-17 09:36:58,276 Sent request: {'num1': 4.0, 'num2': 0.0, 'operation': 'divide'}
+2024-06-17 09:36:58,277 ---- Client Stop ----
