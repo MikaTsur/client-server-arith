@@ -142,3 +142,11 @@
 2024-06-17 13:33:40,951 - client_logger - INFO - Sent request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
 2024-06-17 13:33:40,952 - client_logger - INFO - Received result: 8.0000000000
 2024-06-17 13:33:42,707 - client_logger - INFO - ---- Client Shutdown ----
+2024-06-17 13:44:56,737 - client_logger - INFO - ---- Client Start ----
+2024-06-17 13:44:59,924 - client_logger - INFO - Sent request: {'num1': 5.0, 'num2': 5.0, 'operation': 'add'}
+2024-06-17 13:44:59,925 - client_logger - INFO - Received result: 10.0000000000
+2024-06-17 13:45:07,163 - client_logger - INFO - ---- Client Stop ----
+2024-06-17 13:46:06,508 - client_logger - INFO - ---- Client Start ----
+2024-06-17 13:46:09,893 - client_logger - INFO - Sent request: {'num1': 3.0, 'num2': 3.0, 'operation': 'add'}
+2024-06-17 13:46:09,894 - client_logger - INFO - Received result: 6.0000000000
+2024-06-17 13:46:15,141 - client_logger - INFO - ---- Client Stop ----

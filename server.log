@@ -163,3 +163,14 @@
 2024-06-17 13:31:55,242 - server_logger - INFO - Sent result: 1.0
 2024-06-17 13:32:17,456 - server_logger - INFO - ---- Server Shutdown ----
 2024-06-17 13:32:17,456 - server_logger - INFO - ---- Server Stop ----
+2024-06-17 13:33:28,047 - server_logger - INFO - ---- Server Start ----
+2024-06-17 13:33:28,055 - server_logger - INFO - Server listening on port 65432
+2024-06-17 13:33:40,952 - server_logger - INFO - Connected by ('127.0.0.1', 52562)
+2024-06-17 13:33:40,952 - server_logger - INFO - Received request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 13:33:40,952 - server_logger - INFO - Sent result: 8.0
+2024-06-17 13:42:41,520 - server_logger - INFO - ---- Server Start ----
+2024-06-17 13:42:58,556 - server_logger - INFO - ---- Server Start ----
+2024-06-17 13:44:33,790 - server_logger - INFO - ---- Server Shutdown ----
+2024-06-17 13:44:33,802 - server_logger - INFO - ---- Server Stop ----
+2024-06-17 13:44:37,296 - server_logger - INFO - ---- Server Start ----
+2024-06-17 13:44:37,309 - server_logger - INFO - Server listening on port 65432
