@@ -74,3 +74,50 @@
 2024-06-17 10:17:57,252 Received request: {'num1': 4.0, 'num2': 1.5, 'operation': 'divide'}
 2024-06-17 10:17:57,253 Sent result: 2.6666666666666665
 2024-06-17 10:17:57,253 ---- Server Stop ----
+2024-06-17 10:35:59,746 ---- Server Start ----
+2024-06-17 10:35:59,755 Server listening on port 65432
+2024-06-17 10:36:18,754 Connected by ('127.0.0.1', 50344)
+2024-06-17 10:36:18,755 Received request: {'num1': 10.0, 'num2': 10.0, 'operation': 'multiply'}
+2024-06-17 10:36:18,755 Sent result: 100.0
+2024-06-17 10:36:18,755 ---- Server Stop ----
+2024-06-17 10:38:25,159 ---- Server Start ----
+2024-06-17 10:38:25,167 Server listening on port 65432
+2024-06-17 10:38:33,119 Connected by ('127.0.0.1', 50383)
+2024-06-17 10:38:33,120 Received request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 10:38:33,120 Sent result: 8.0
+2024-06-17 10:38:33,120 ---- Server Stop ----
+2024-06-17 10:40:54,783 ---- Server Start ----
+2024-06-17 10:40:54,788 Server listening on port 65432
+2024-06-17 10:41:09,405 Connected by ('127.0.0.1', 50466)
+2024-06-17 10:41:09,405 Received request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 10:41:09,406 Sent result: 8.0
+2024-06-17 10:41:09,406 ---- Server Stop ----
+2024-06-17 10:41:56,759 ---- Server Start ----
+2024-06-17 10:41:56,767 Server listening on port 65432
+2024-06-17 10:42:07,969 Connected by ('127.0.0.1', 50525)
+2024-06-17 10:42:07,969 Received request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 10:42:07,969 Sent result: 8.0
+2024-06-17 10:42:07,969 ---- Server Stop ----
+2024-06-17 10:45:14,050 ---- Server Start ----
+2024-06-17 10:45:14,060 Server listening on port 65432
+2024-06-17 10:45:23,944 Connected by ('127.0.0.1', 50598)
+2024-06-17 10:45:23,944 Received request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 10:45:23,945 Sent result: 8.0
+2024-06-17 10:45:32,109 Connected by ('127.0.0.1', 50599)
+2024-06-17 10:45:32,109 Received request: {'num1': 2.0, 'num2': 2.0, 'operation': 'add'}
+2024-06-17 10:45:32,109 Sent result: 4.0
+2024-06-17 10:45:44,192 Connected by ('127.0.0.1', 50607)
+2024-06-17 10:45:44,192 Received request: {'num1': 10.0, 'num2': 10.0, 'operation': 'multiply'}
+2024-06-17 10:45:44,192 Sent result: 100.0
+2024-06-17 10:47:43,641 ---- Server Start ----
+2024-06-17 10:47:43,648 Server listening on port 65432
+2024-06-17 10:48:23,613 Connected by ('127.0.0.1', 50651)
+2024-06-17 10:48:23,613 Received request: {'num1': 10.0, 'num2': 10.0, 'operation': 'subtract'}
+2024-06-17 10:48:23,613 Sent result: 0.0
+2024-06-17 10:50:15,092 ---- Server Start ----
+2024-06-17 10:50:15,101 Server listening on port 65432
+2024-06-17 10:50:36,560 Connected by ('127.0.0.1', 50716)
+2024-06-17 10:50:36,561 Received request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 10:50:36,561 Sent result: 8.0
+2024-06-17 10:50:47,066 Connected by ('127.0.0.1', 50717)
+2024-06-17 10:50:47,066 Received request: {'num1': 4.0, 'num2': 2.0, 'operation': ' divide'}

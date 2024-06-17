@@ -83,3 +83,35 @@
 2024-06-17 10:17:57,252 Sent request: {'num1': 4.0, 'num2': 1.5, 'operation': 'divide'}
 2024-06-17 10:17:57,253 Received result: 2.6666666667
 2024-06-17 10:17:57,253 ---- Client Stop ----
+2024-06-17 10:36:07,754 ---- Client Start ----
+2024-06-17 10:36:07,755 ---- Function get_user_input Enter ----
+2024-06-17 10:36:18,748 ---- Function get_user_input Exit ----
+2024-06-17 10:36:18,755 Sent request: {'num1': 10.0, 'num2': 10.0, 'operation': 'multiply'}
+2024-06-17 10:36:18,755 Received result: 100.0000000000
+2024-06-17 10:36:18,755 ---- Client Stop ----
+2024-06-17 10:42:04,292 ---- Client Start ----
+2024-06-17 10:42:04,293 ---- Function get_user_input Enter ----
+2024-06-17 10:42:07,963 ---- Function get_user_input Exit ----
+2024-06-17 10:42:07,969 Sent request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 10:42:07,969 Received result: 8.0000000000
+2024-06-17 10:42:07,969 ---- Client Stop ----
+2024-06-17 10:45:19,639 ---- Client Start ----
+2024-06-17 10:45:23,944 Sent request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 10:45:23,945 Received result: 8.0000000000
+2024-06-17 10:45:32,108 Sent request: {'num1': 2.0, 'num2': 2.0, 'operation': 'add'}
+2024-06-17 10:45:32,109 Received result: 4.0000000000
+2024-06-17 10:45:44,192 Sent request: {'num1': 10.0, 'num2': 10.0, 'operation': 'multiply'}
+2024-06-17 10:45:44,193 Received result: 100.0000000000
+2024-06-17 10:45:50,164 ---- Client Stop ----
+2024-06-17 10:48:15,138 ---- Client Start ----
+2024-06-17 10:48:23,613 Sent request: {'num1': 10.0, 'num2': 10.0, 'operation': 'subtract'}
+2024-06-17 10:48:23,613 Received result: 0.0000000000
+2024-06-17 10:50:32,504 ---- Client Start ----
+2024-06-17 10:50:36,561 Sent request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 10:50:36,561 Received result: 8.0000000000
+2024-06-17 10:50:47,066 Sent request: {'num1': 4.0, 'num2': 2.0, 'operation': ' divide'}
+2024-06-17 10:51:20,424 ---- Client Start ----
+2024-06-17 10:51:24,606 Sent request: {'num1': 3.0, 'num2': 3.0, 'operation': 'add'}
+2024-06-17 10:51:24,608 Received result: 6.0000000000
+2024-06-17 10:51:29,413 Sent request: {'num1': 3.0, 'num2': 3.0, 'operation': 'add'}
+2024-06-17 10:51:29,413 Received result: 6.0000000000

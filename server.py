@@ -1,4 +1,4 @@
-# server.py
+#server.py
 import socket
 import pickle
 from utils import setup_logger
@@ -42,6 +42,16 @@ def get_operation(operation):
     else:
         raise ValueError("Unsupported operation")
 
+def handle_client_request(conn):
+    data = conn.recv(1024)
+    if data:
+        request = pickle.loads(data)
+        logger.info(f'Received request: {request}')
+        operation = get_operation(request['operation'])
+        result = operation.operate(request['num1'], request['num2'])
+        conn.sendall(pickle.dumps(round(result, 10)))  # Round result to 10 decimal places
+        logger.info(f'Sent result: {result}')
+
 def main():
     logger.info('---- Server Start ----')
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -49,18 +59,13 @@ def main():
         s.listen()
         logger.info('Server listening on port 65432')
 
-        conn, addr = s.accept()
-        with conn:
-            logger.info(f'Connected by {addr}')
-            data = conn.recv(1024)
-            if data:
-                request = pickle.loads(data)
-                logger.info(f'Received request: {request}')
-                operation = get_operation(request['operation'])
-                result = operation.operate(request['num1'], request['num2'])
-                conn.sendall(pickle.dumps(round(result, 10)))  # Round result to 10 decimal place
-                logger.info(f'Sent result: {result}')
+        while True:
+            conn, addr = s.accept()
+            with conn:
+                logger.info(f'Connected by {addr}')
+                handle_client_request(conn)
     logger.info('---- Server Stop ----')
 
 if __name__ == '__main__':
     main()
+
