@@ -27,8 +27,8 @@ class Client:
 
                 data = s.recv(1024)
                 result = pickle.loads(data)
-                self.logger.info(f'Received result: {result}')
-                print(f"The result is: {result}")
+                self.logger.info(f'Received result: {result:.10f}')
+                print(f"The result is: {result:.10f}")
 
             except EOFError:
                 print("Error: Operation not allowd - Server did not send a valid response.")

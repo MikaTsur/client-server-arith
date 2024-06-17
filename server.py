@@ -58,7 +58,7 @@ def main():
                 logger.info(f'Received request: {request}')
                 operation = get_operation(request['operation'])
                 result = operation.operate(request['num1'], request['num2'])
-                conn.sendall(pickle.dumps(result))
+                conn.sendall(pickle.dumps(round(result, 10)))  # Round result to 10 decimal place
                 logger.info(f'Sent result: {result}')
     logger.info('---- Server Stop ----')
 
