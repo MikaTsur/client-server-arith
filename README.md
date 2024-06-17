@@ -46,7 +46,6 @@ You can find the project repository on GitHub: [client-server-arith](https://git
     ```sh
     python client.py
     ```
-
 ### Perform Operations
 
 1. Follow the prompts in the client terminal to enter two numbers and an arithmetic operation (`add`, `subtract`, `multiply`, `divide`).
@@ -86,3 +85,4 @@ Do you want to perform another operation? (yes/no): no
 
 # Shut down the server (press Ctrl+C in the server terminal)
 2024-06-17 12:01:00 - server_logger - INFO - ---- Server Shutdown ----
+
