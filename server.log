@@ -1,0 +1,6 @@
+2024-06-17 08:51:15,883 ---- Server Start ----
+2024-06-17 08:51:15,901 Server listening on port 65432
+2024-06-17 08:51:55,162 Connected by ('127.0.0.1', 62423)
+2024-06-17 08:51:55,162 Received request: {'num1': 5.0, 'num2': 5.0, 'operation': 'multiply'}
+2024-06-17 08:51:55,162 Sent result: 25.0
+2024-06-17 08:51:55,163 ---- Server Stop ----
