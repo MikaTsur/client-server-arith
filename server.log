@@ -121,3 +121,45 @@
 2024-06-17 10:50:36,561 Sent result: 8.0
 2024-06-17 10:50:47,066 Connected by ('127.0.0.1', 50717)
 2024-06-17 10:50:47,066 Received request: {'num1': 4.0, 'num2': 2.0, 'operation': ' divide'}
+2024-06-17 10:51:10,519 ---- Server Start ----
+2024-06-17 10:51:10,523 Server listening on port 65432
+2024-06-17 10:51:24,607 Connected by ('127.0.0.1', 50726)
+2024-06-17 10:51:24,607 Received request: {'num1': 3.0, 'num2': 3.0, 'operation': 'add'}
+2024-06-17 10:51:24,607 Sent result: 6.0
+2024-06-17 10:51:29,413 Connected by ('127.0.0.1', 50727)
+2024-06-17 10:51:29,413 Received request: {'num1': 3.0, 'num2': 3.0, 'operation': 'add'}
+2024-06-17 10:51:29,413 Sent result: 6.0
+2024-06-17 13:20:17,530 - server_logger - INFO - ---- Server Start ----
+2024-06-17 13:21:43,339 - server_logger - INFO - ---- Server Start ----
+2024-06-17 13:21:43,349 - server_logger - INFO - Server listening on port 65432
+2024-06-17 13:22:11,789 - server_logger - INFO - Connected by ('127.0.0.1', 52318)
+2024-06-17 13:22:11,789 - server_logger - INFO - Received request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 13:22:11,790 - server_logger - INFO - Sent result: 8.0
+2024-06-17 13:22:30,019 - server_logger - INFO - Connected by ('127.0.0.1', 52324)
+2024-06-17 13:22:30,019 - server_logger - INFO - Received request: {'num1': 5.0, 'num2': 5.0, 'operation': 'multiply'}
+2024-06-17 13:22:30,019 - server_logger - INFO - Sent result: 25.0
+2024-06-17 13:26:55,326 - server_logger - INFO - ---- Server Start ----
+2024-06-17 13:26:55,331 - server_logger - INFO - Server listening on port 65432
+2024-06-17 13:27:39,322 - server_logger - INFO - Connected by ('127.0.0.1', 52427)
+2024-06-17 13:27:39,323 - server_logger - INFO - Received request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 13:27:39,323 - server_logger - INFO - Sent result: 8.0
+2024-06-17 13:30:05,966 - server_logger - INFO - ---- Server Start ----
+2024-06-17 13:30:05,976 - server_logger - INFO - Server listening on port 65432
+2024-06-17 13:30:09,005 - server_logger - INFO - ---- Server Shutdown ----
+2024-06-17 13:30:09,007 - server_logger - INFO - ---- Server Stop ----
+2024-06-17 13:30:15,288 - server_logger - INFO - ---- Server Start ----
+2024-06-17 13:30:15,293 - server_logger - INFO - Server listening on port 65432
+2024-06-17 13:30:38,572 - server_logger - INFO - Connected by ('127.0.0.1', 52511)
+2024-06-17 13:30:38,572 - server_logger - INFO - Received request: {'num1': 2.0, 'num2': 2.0, 'operation': 'add'}
+2024-06-17 13:30:38,572 - server_logger - INFO - Sent result: 4.0
+2024-06-17 13:30:50,600 - server_logger - INFO - Connected by ('127.0.0.1', 52517)
+2024-06-17 13:30:50,600 - server_logger - INFO - Received request: {'num1': 4.0, 'num2': 0.0, 'operation': 'divide'}
+2024-06-17 13:30:50,600 - server_logger - ERROR - Error handling client request: Division by zero is not allowed
+2024-06-17 13:31:27,744 - server_logger - INFO - Connected by ('127.0.0.1', 52520)
+2024-06-17 13:31:27,745 - server_logger - INFO - Received request: {'num1': 6.0, 'num2': 7.0, 'operation': 'subtract'}
+2024-06-17 13:31:27,745 - server_logger - INFO - Sent result: -1.0
+2024-06-17 13:31:55,242 - server_logger - INFO - Connected by ('127.0.0.1', 52525)
+2024-06-17 13:31:55,242 - server_logger - INFO - Received request: {'num1': 1.0, 'num2': 1.0, 'operation': 'multiply'}
+2024-06-17 13:31:55,242 - server_logger - INFO - Sent result: 1.0
+2024-06-17 13:32:17,456 - server_logger - INFO - ---- Server Shutdown ----
+2024-06-17 13:32:17,456 - server_logger - INFO - ---- Server Stop ----

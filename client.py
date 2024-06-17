@@ -1,8 +1,9 @@
 #client.py
 import socket
 import pickle
+import signal
+import sys
 from utils import setup_logger
-
 
 class Client:
     def __init__(self, host='localhost', port=65432):
@@ -11,10 +12,16 @@ class Client:
         self.logger = setup_logger('client_logger', 'client.log')
 
     def get_user_input(self):
-        num1 = float(input("Enter the first number: "))
-        num2 = float(input("Enter the second number: "))
-        operation = input("Enter the operation (add, subtract, multiply, divide): ")
-        return {'num1': num1, 'num2': num2, 'operation': operation}
+        while True:
+            try:
+                num1 = float(input("Enter the first number: "))
+                num2 = float(input("Enter the second number: "))
+                operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
+                if operation not in ('add', 'subtract', 'multiply', 'divide'):
+                    raise ValueError("Invalid operation")
+                return {'num1': num1, 'num2': num2, 'operation': operation}
+            except ValueError as e:
+                print(f"Invalid input: {e}")
 
     def send_request(self, user_input):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -25,12 +32,15 @@ class Client:
 
                 data = s.recv(1024)
                 result = pickle.loads(data)
-                self.logger.info(f'Received result: {result:.10f}')
-                print(f"The result is: {result:.10f}")
+                if isinstance(result, str) and result.startswith("Error"):
+                    self.logger.error(result)
+                    print(result)
+                else:
+                    self.logger.info(f'Received result: {result:.10f}')
+                    print(f"The result is: {result:.10f}")
 
-            except EOFError:
-                print("Error: Operation not allowed - Server did not send a valid response.")
             except Exception as e:
+                self.logger.error(f'Error: {e}')
                 print(f"Error: {e}")
 
     def run(self):
@@ -43,7 +53,11 @@ class Client:
                 break
         self.logger.info('---- Client Stop ----')
 
+def signal_handler(sig, frame):
+    client.logger.info('---- Client Shutdown ----')
+    sys.exit(0)
 
 if __name__ == '__main__':
+    signal.signal(signal.SIGINT, signal_handler)
     client = Client()
     client.run()

@@ -115,3 +115,30 @@
 2024-06-17 10:51:24,608 Received result: 6.0000000000
 2024-06-17 10:51:29,413 Sent request: {'num1': 3.0, 'num2': 3.0, 'operation': 'add'}
 2024-06-17 10:51:29,413 Received result: 6.0000000000
+2024-06-17 13:22:07,626 - client_logger - INFO - ---- Client Start ----
+2024-06-17 13:22:11,788 - client_logger - INFO - Sent request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 13:22:11,790 - client_logger - INFO - Received result: 8.0000000000
+2024-06-17 13:22:30,018 - client_logger - INFO - Sent request: {'num1': 5.0, 'num2': 5.0, 'operation': 'multiply'}
+2024-06-17 13:22:30,020 - client_logger - INFO - Received result: 25.0000000000
+2024-06-17 13:22:37,959 - client_logger - INFO - ---- Client Stop ----
+2024-06-17 13:26:37,433 - client_logger - INFO - ---- Client Start ----
+2024-06-17 13:26:43,688 - client_logger - ERROR - Error: [WinError 10061] No connection could be made because the target machine actively refused it
+2024-06-17 13:26:51,501 - client_logger - INFO - ---- Client Stop ----
+2024-06-17 13:27:33,249 - client_logger - INFO - ---- Client Start ----
+2024-06-17 13:27:39,322 - client_logger - INFO - Sent request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 13:27:39,323 - client_logger - INFO - Received result: 8.0000000000
+2024-06-17 13:27:42,758 - client_logger - INFO - ---- Client Stop ----
+2024-06-17 13:30:33,656 - client_logger - INFO - ---- Client Start ----
+2024-06-17 13:30:38,572 - client_logger - INFO - Sent request: {'num1': 2.0, 'num2': 2.0, 'operation': 'add'}
+2024-06-17 13:30:38,573 - client_logger - INFO - Received result: 4.0000000000
+2024-06-17 13:30:50,599 - client_logger - INFO - Sent request: {'num1': 4.0, 'num2': 0.0, 'operation': 'divide'}
+2024-06-17 13:30:50,600 - client_logger - ERROR - Error: Division by zero is not allowed
+2024-06-17 13:31:27,744 - client_logger - INFO - Sent request: {'num1': 6.0, 'num2': 7.0, 'operation': 'subtract'}
+2024-06-17 13:31:27,746 - client_logger - INFO - Received result: -1.0000000000
+2024-06-17 13:31:55,241 - client_logger - INFO - Sent request: {'num1': 1.0, 'num2': 1.0, 'operation': 'multiply'}
+2024-06-17 13:31:55,242 - client_logger - INFO - Received result: 1.0000000000
+2024-06-17 13:32:11,318 - client_logger - INFO - ---- Client Shutdown ----
+2024-06-17 13:33:36,988 - client_logger - INFO - ---- Client Start ----
+2024-06-17 13:33:40,951 - client_logger - INFO - Sent request: {'num1': 4.0, 'num2': 4.0, 'operation': 'add'}
+2024-06-17 13:33:40,952 - client_logger - INFO - Received result: 8.0000000000
+2024-06-17 13:33:42,707 - client_logger - INFO - ---- Client Shutdown ----

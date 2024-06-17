@@ -1,6 +1,9 @@
 #server.py
 import socket
 import pickle
+import threading
+import signal
+import sys
 from utils import setup_logger
 from abc import ABC, abstractmethod
 
@@ -43,29 +46,54 @@ def get_operation(operation):
         raise ValueError("Unsupported operation")
 
 def handle_client_request(conn):
-    data = conn.recv(1024)
-    if data:
-        request = pickle.loads(data)
-        logger.info(f'Received request: {request}')
-        operation = get_operation(request['operation'])
-        result = operation.operate(request['num1'], request['num2'])
-        conn.sendall(pickle.dumps(round(result, 10)))  # Round result to 10 decimal places
-        logger.info(f'Sent result: {result}')
+    try:
+        data = conn.recv(1024)
+        if data:
+            request = pickle.loads(data)
+            logger.info(f'Received request: {request}')
+            operation = get_operation(request['operation'])
+            result = operation.operate(request['num1'], request['num2'])
+            conn.sendall(pickle.dumps(round(result, 10)))  # Round result to 10 decimal places
+            logger.info(f'Sent result: {result}')
+    except Exception as e:
+        logger.error(f'Error handling client request: {e}')
+        conn.sendall(pickle.dumps(f'Error: {e}'))
+
+def handle_client(conn, addr):
+    with conn:
+        logger.info(f'Connected by {addr}')
+        handle_client_request(conn)
+
+def signal_handler(sig, frame):
+    logger.info('---- Server Shutdown ----')
+    global running
+    running = False
 
 def main():
+    global s, running
     logger.info('---- Server Start ----')
-    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-        s.bind(('localhost', 65432))
-        s.listen()
-        logger.info('Server listening on port 65432')
+    signal.signal(signal.SIGINT, signal_handler)
 
-        while True:
+    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s.bind(('localhost', 65432))
+    s.listen()
+    logger.info('Server listening on port 65432')
+
+    running = True
+    while running:
+        try:
+            s.settimeout(1)  # Set a timeout for the accept method
             conn, addr = s.accept()
-            with conn:
-                logger.info(f'Connected by {addr}')
-                handle_client_request(conn)
+            client_thread = threading.Thread(target=handle_client, args=(conn, addr))
+            client_thread.start()
+        except socket.timeout:
+            continue
+        except Exception as e:
+            logger.error(f'Error accepting connections: {e}')
+            break
+
+    s.close()
     logger.info('---- Server Stop ----')
 
 if __name__ == '__main__':
     main()
-
