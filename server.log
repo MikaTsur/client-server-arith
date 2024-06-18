@@ -174,3 +174,18 @@
 2024-06-17 13:44:33,802 - server_logger - INFO - ---- Server Stop ----
 2024-06-17 13:44:37,296 - server_logger - INFO - ---- Server Start ----
 2024-06-17 13:44:37,309 - server_logger - INFO - Server listening on port 65432
+2024-06-17 13:44:59,924 - server_logger - INFO - Connected by ('127.0.0.1', 53086)
+2024-06-17 13:44:59,924 - server_logger - INFO - Received request: {'num1': 5.0, 'num2': 5.0, 'operation': 'add'}
+2024-06-17 13:44:59,925 - server_logger - INFO - Sent result: 10.0
+2024-06-17 13:46:09,894 - server_logger - INFO - Connected by ('127.0.0.1', 53102)
+2024-06-17 13:46:09,894 - server_logger - INFO - Received request: {'num1': 3.0, 'num2': 3.0, 'operation': 'add'}
+2024-06-17 13:46:09,894 - server_logger - INFO - Sent result: 6.0
+2024-06-17 13:46:38,146 - server_logger - INFO - ---- Server Shutdown ----
+2024-06-17 13:46:38,147 - server_logger - INFO - ---- Server Stop ----
+2024-06-17 23:59:14,616 - server_logger - INFO - Starting server...
+2024-06-18 00:02:20,693 - server_logger - INFO - Starting server...
+2024-06-18 00:02:46,165 - server_logger - INFO - Received request: {'num1': 5.0, 'num2': 5.0, 'operation': 'divide'}
+2024-06-18 00:02:46,166 - server_logger - INFO - Sent response: {'result': 1.0}
+2024-06-18 00:03:07,001 - server_logger - INFO - Received request: {'num1': 0.0, 'num2': 0.0, 'operation': 'divide'}
+2024-06-18 00:03:07,002 - server_logger - ERROR - Error handling request: Division by zero is not allowed
+2024-06-18 00:03:07,002 - server_logger - INFO - Sent response: {'error': 'Division by zero is not allowed'}

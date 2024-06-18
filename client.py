@@ -1,12 +1,10 @@
-#client.py
-import socket
-import pickle
-import signal
-import sys
+import http.client
+import json
 from utils import setup_logger
 
+
 class Client:
-    def __init__(self, host='localhost', port=65432):
+    def __init__(self, host='127.0.0.1', port=65432):
         self.host = host
         self.port = port
         self.logger = setup_logger('client_logger', 'client.log')
@@ -24,24 +22,27 @@ class Client:
                 print(f"Invalid input: {e}")
 
     def send_request(self, user_input):
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-            try:
-                s.connect((self.host, self.port))
-                s.sendall(pickle.dumps(user_input))
-                self.logger.info(f'Sent request: {user_input}')
+        conn = http.client.HTTPConnection(self.host, self.port)
+        headers = {'Content-type': 'application/json'}
 
-                data = s.recv(1024)
-                result = pickle.loads(data)
-                if isinstance(result, str) and result.startswith("Error"):
-                    self.logger.error(result)
-                    print(result)
-                else:
-                    self.logger.info(f'Received result: {result:.10f}')
-                    print(f"The result is: {result:.10f}")
+        try:
+            conn.request('POST', '/', json.dumps(user_input), headers)
+            response = conn.getresponse()
+            response_data = json.loads(response.read().decode())
 
-            except Exception as e:
-                self.logger.error(f'Error: {e}')
-                print(f"Error: {e}")
+            if 'error' in response_data:
+                self.logger.error(response_data['error'])
+                print(response_data['error'])
+            else:
+                result = response_data['result']
+                self.logger.info(f'Received result: {result:.10f}')
+                print(f"The result is: {result:.10f}")
+
+        except Exception as e:
+            self.logger.error(f'Error: {e}')
+            print(f"Error: {e}")
+        finally:
+            conn.close()
 
     def run(self):
         self.logger.info('---- Client Start ----')
@@ -53,11 +54,7 @@ class Client:
                 break
         self.logger.info('---- Client Stop ----')
 
-def signal_handler(sig, frame):
-    client.logger.info('---- Client Shutdown ----')
-    sys.exit(0)
 
 if __name__ == '__main__':
-    signal.signal(signal.SIGINT, signal_handler)
     client = Client()
     client.run()
